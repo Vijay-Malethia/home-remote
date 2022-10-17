@@ -55,32 +55,60 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Center(
-                child: Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Routines',
-                        style: TextStyle(
-                            color: Color(0xFFa69ebe),
-                            fontSize: 17,
-                            fontWeight: FontWeight.w700),
+              Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                child: LayoutBuilder(builder: (context, snapshot) {
+                  if (snapshot.maxWidth < 668) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'Routines',
+                          style: TextStyle(
+                              color: Color(0xFFa69ebe),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Text(
+                          'View all',
+                          style: TextStyle(
+                              color: Color(
+                                0xFFd8e2f0,
+                              ),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    );
+                  } else {
+                    return Container(
+                      width: 500,
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            'Routines',
+                            style: TextStyle(
+                                color: Color(0xFFa69ebe),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          Text(
+                            'View all',
+                            style: TextStyle(
+                                color: Color(
+                                  0xFFd8e2f0,
+                                ),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
+                          )
+                        ],
                       ),
-                      Text(
-                        'View all',
-                        style: TextStyle(
-                            color: Color(
-                              0xFFd8e2f0,
-                            ),
-                            fontSize: 17,
-                            fontWeight: FontWeight.w700),
-                      )
-                    ],
-                  ),
-                ),
+                    );
+                  }
+                }),
               ),
               const SizedBox(
                 height: 10,
@@ -99,27 +127,57 @@ class HomeScreen extends StatelessWidget {
               Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      'Rooms',
-                      style: TextStyle(
-                          color: Color(0xFFa69ebe),
-                          fontSize: 17,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Text(
-                      'View all',
-                      style: TextStyle(
-                          color: Color(
-                            0xFFd8e2f0,
+                child: LayoutBuilder(builder: (context, snapshot) {
+                  if (snapshot.maxWidth < 668) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'Rooms',
+                          style: TextStyle(
+                              color: Color(0xFFa69ebe),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Text(
+                          'View all',
+                          style: TextStyle(
+                              color: Color(
+                                0xFFd8e2f0,
+                              ),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    );
+                  } else {
+                    return Container(
+                      alignment: Alignment.center,
+                      width: 500,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            'Rooms',
+                            style: TextStyle(
+                                color: Color(0xFFa69ebe),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
                           ),
-                          fontSize: 17,
-                          fontWeight: FontWeight.w700),
-                    )
-                  ],
-                ),
+                          Text(
+                            'View all',
+                            style: TextStyle(
+                                color: Color(
+                                  0xFFd8e2f0,
+                                ),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
+                          )
+                        ],
+                      ),
+                    );
+                  }
+                }),
               ),
               const SizedBox(
                 height: 10,
@@ -135,27 +193,57 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      'Recently used devices',
-                      style: TextStyle(
-                          color: Color(0xFFa69ebe),
-                          fontSize: 17,
-                          fontWeight: FontWeight.w700),
-                    ),
-                    Text(
-                      'View all',
-                      style: TextStyle(
-                          color: Color(
-                            0xFFd8e2f0,
+                child: LayoutBuilder(builder: (context, snapshot) {
+                  if (snapshot.maxWidth < 668) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'Recently used devices',
+                          style: TextStyle(
+                              color: Color(0xFFa69ebe),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        Text(
+                          'View all',
+                          style: TextStyle(
+                              color: Color(
+                                0xFFd8e2f0,
+                              ),
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    );
+                  } else {
+                    return Container(
+                      width: 500,
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            'Recently used devices',
+                            style: TextStyle(
+                                color: Color(0xFFa69ebe),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
                           ),
-                          fontSize: 17,
-                          fontWeight: FontWeight.w700),
-                    )
-                  ],
-                ),
+                          Text(
+                            'View all',
+                            style: TextStyle(
+                                color: Color(
+                                  0xFFd8e2f0,
+                                ),
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700),
+                          )
+                        ],
+                      ),
+                    );
+                  }
+                }),
               ),
               const SizedBox(
                 height: 10,

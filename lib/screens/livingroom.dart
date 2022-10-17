@@ -37,39 +37,49 @@ class _LivingRoomState extends State<LivingRoom> {
           Container(
             margin: const EdgeInsets.only(top: 30, left: 17),
             alignment: Alignment.topLeft,
-            child: GestureDetector(
-                onTap: (() {
-                  Navigator.pop(context);
-                }),
-                child: const Icon(
+            child: GestureDetector(onTap: (() {
+              Navigator.pop(context);
+            }), child: LayoutBuilder(builder: (context, snapshot) {
+              if (snapshot.maxWidth < 668) {
+                return const Icon(
                   Icons.arrow_back,
                   color: Colors.grey,
-                )),
+                );
+              } else {
+                return Center();
+              }
+            })),
           ),
           const SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text(
-                'Living room',
-                style: TextStyle(
-                    color: Color(0xFF8273a2),
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20),
-              ),
-              SizedBox(
-                width: 120,
-              ),
-              Text('Edit',
+          Container(
+            width: 600,
+            alignment: Alignment.center,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                Text(
+                  'Living room',
                   style: TextStyle(
-                      color: Color(0xFFc3d1e6), fontWeight: FontWeight.bold))
-            ],
+                      color: Color(0xFF8273a2),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20),
+                ),
+                SizedBox(
+                  width: 120,
+                ),
+                Text('Edit',
+                    style: TextStyle(
+                        color: Color(0xFFc3d1e6), fontWeight: FontWeight.bold))
+              ],
+            ),
           ),
           const SizedBox(
             height: 5,
           ),
           Container(
+            width: 430,
+            alignment: Alignment.center,
             height: 65,
             margin: const EdgeInsets.symmetric(horizontal: 25),
             decoration: const BoxDecoration(
@@ -127,6 +137,8 @@ class _LivingRoomState extends State<LivingRoom> {
             ),
           ),
           Container(
+            width: 600,
+            alignment: Alignment.center,
             margin: EdgeInsets.only(top: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

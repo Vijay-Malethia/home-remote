@@ -57,6 +57,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Center(
                 child: Container(
+                  alignment: Alignment.center,
                   margin: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,8 +87,9 @@ class HomeScreen extends StatelessWidget {
               ),
               Center(
                 child: Container(
+                  alignment: Alignment.center,
                   margin: const EdgeInsets.symmetric(horizontal: 10),
-                  width: double.infinity,
+                  width: 450,
                   child: const RoutineScroll(),
                 ),
               ),
@@ -95,6 +97,7 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               Container(
+                alignment: Alignment.center,
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,8 +125,9 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               Container(
+                alignment: Alignment.center,
                 margin: const EdgeInsets.symmetric(horizontal: 10),
-                width: double.infinity,
+                width: 450,
                 child: const Room(),
               ),
               const SizedBox(
@@ -157,8 +161,9 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               Container(
+                alignment: Alignment.center,
                 margin: const EdgeInsets.symmetric(horizontal: 10),
-                width: double.infinity,
+                width: 500,
                 child: const RecentlyDevices(),
               ),
             ],

@@ -42,7 +42,7 @@ class Room extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.only(left: 8),
                           child: const Text(
-                            'Living Room2',
+                            'Living Room',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 132, 163, 214)),
                           ),

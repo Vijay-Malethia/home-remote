@@ -6,6 +6,7 @@ class Bg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // alignment: Alignment.center,
       margin: const EdgeInsets.only(top: 50),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
